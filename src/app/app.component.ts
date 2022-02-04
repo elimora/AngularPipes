@@ -15,6 +15,19 @@ export class AppComponent {
   porcentaje:number  =.234; 
   salario   :number  =1234.5; 
   fecha     :Date    = new Date(); 
+  activar   :boolean =true; 
+  idioma    :string  ='fr'; 
+
+  Activar(){
+    this.activar=!this.activar;
+    console.log(this.activar)
+
+  }
+  SelecIdioma(miSelecc:string){
+    this.idioma=miSelecc; 
+  }
+
+  videoUrl:string='https://www.youtube.com/embed/cedrbpeoicY'
   
   valorPromesa = new Promise<string>((resolve)=>{
     setTimeout(() => {
